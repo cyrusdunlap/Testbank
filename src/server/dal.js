@@ -41,6 +41,7 @@ run().catch(console.dir);
 
 // create user account
 function create(name, email, password) {
+  db = client.db("my project");
   return new Promise((resolve, reject) => {
     const collection = db.collection("users");
     const doc = { name, email, password, balance: 0 };
