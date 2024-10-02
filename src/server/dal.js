@@ -4,11 +4,11 @@ const url =
 let db = null;
 
 //connect to mongo
-MongoClient.connect(url, { useUnifiedTopology: true }, function (err, client) {
+MongoClient.connect(url, { useUnifiedTopology: true }, function (err, db) {
   console.log("Connected successfully to db server");
 
   // connect to myproject database
-  var db = client.db("myproject");
+  db = client.db("myproject");
 });
 
 // create user account
