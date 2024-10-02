@@ -1,10 +1,9 @@
 const MongoClient = require("mongodb").MongoClient;
-const url =
-  "mongodb+srv://cdunlap09:P8pyEaWZwoC9n2SF@cluster0.qa5xi.mongodb.net/";
+const url = "mongodb://localhost:27017";
 let db = null;
 
 //connect to mongo
-MongoClient.connect(url, { useUnifiedTopology: true }, function (err, db) {
+MongoClient.connect(url, { useUnifiedTopology: true }, function (err, client) {
   console.log("Connected successfully to db server");
 
   // connect to myproject database
