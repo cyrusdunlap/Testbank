@@ -106,7 +106,7 @@ function update(email, amount) {
 // all users
 function all() {
   return new Promise((resolve, reject) => {
-    const customers = client.db
+    const customers = db
       .collection("users")
       .find({})
       .toArray(function (err, docs) {
